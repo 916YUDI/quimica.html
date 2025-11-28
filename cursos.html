@@ -11,45 +11,51 @@
 
 <body>
     <style>
-        * {
+        body {
+            background: #e5e5e5;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
 
-        body {
-            background: #e5e5e5;
-        }
-
-        /* HEADER */
-        .header {
-            width: 100%;
-            padding: 15px 30px;
-            background: white;
+        header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #d4cfcf 0%, #d7d9d9 60%, #12b2ab 75%, #5e2a4a 100%);
+            height: 70px;
         }
 
-        .header ul {
+        .esquerda {
             display: flex;
-            list-style: none;
+            align-items: center;
             gap: 20px;
         }
 
-        .header a {
+        .esquerda img {
+            width: 50px;
+            height: 50px;
+        }
+
+        nav a {
+            margin-right: 20px;
             text-decoration: none;
+            color: #000;
             font-weight: bold;
-            color: black;
-            font-size: 14px;
         }
 
-        .menu-icon i {
-            font-size: 26px;
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* BANNER */
         .banner {
             margin-top: 10px;
             width: 100%;
@@ -68,19 +74,18 @@
             margin-bottom: 10px;
         }
 
-        /* TÍTULO */
-        .titulo-categoria {
+        .titulo {
             text-align: center;
             font-size: 22px;
             margin: 25px 0;
             font-weight: bold;
         }
 
-        /* CARDS */
         .cards {
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
             padding: 10px 0 40px;
         }
 
@@ -90,11 +95,13 @@
             border-radius: 8px;
             padding-bottom: 15px;
             box-shadow: 0 0 10px #0002;
+            overflow: hidden;
         }
 
         .card img {
             width: 100%;
-            border-radius: 8px 8px 0 0;
+            height: 130px;
+            object-fit: cover;
         }
 
         .card h3 {
@@ -117,9 +124,6 @@
             font-size: 13px;
         }
 
-
-
-        /* FOOTER */
         .footer {
             width: 100%;
             padding: 30px;
@@ -133,62 +137,88 @@
             margin-bottom: 10px;
         }
     </style>
-    <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Logo AQX">
+
+    <header>
+        <div class="esquerda">
+            <img src="https://i.ibb.co/pqnFHHQ/Captura-de-tela-2025-11-24-100501.png" alt="logo" />
+            <nav>
+                <a href="#">O QUE SOMOS</a>
+                <a href="#">CURSOS</a>
+                <a href="#">BIBLIOTECA</a>
+                <a href="#">LOJA</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">O QUE SOMOS</a></li>
-                <li><a href="#">CURSOS</a></li>
-                <li><a href="#">BIBLIOTECA</a></li>
-                <li><a href="#">LOJA</a></li>
-            </ul>
-        </nav>
-        <div class="menu-icon">
-            <i class="ri-menu-line"></i>
-        </div>
+        <div class="avatar">👤</div>
     </header>
 
     <section class="banner">
-        <img src="banner-img.png" class="banner-img">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqcYk6UI9E_U5MSpuvqtRIuGScTi_CpmJByQ&s" class="banner-img">
         <h2>NOSSOS CURSOS SÃO OS<br>MELHORES DO MERCADO</h2>
     </section>
 
-    <h2 class="titulo-categoria">BIOQUÍMICA - MEDIA</h2>
+    <h2 class="titulo">BIOQUÍMICA - MÉDIA</h2>
 
     <section class="cards">
+
+        <!-- PRIMEIRA FILEIRA -->
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
+            <img src="https://i.ibb.co/NnxM4L7z/quanto-tempo-dura-o-curso-de-quimica.jpg">
+            <h3>Química do ZERO ao Essencial</h3>
             <p>Material completo para estudo avançado com práticas e exercícios.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
 
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
+            <img src="https://i.ibb.co/4MhMVHy/quimica-geral.jpg">
+            <h3>Química Geral: Conceitos e Aplicações</h3>
             <p>Material completo para estudo avançado com práticas e exercícios.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
 
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
+            <img src="https://i.ibb.co/3hQd2Pm/materia.jpg">
+            <h3>Transformações da Matéria</h3>
             <p>Material completo para estudo avançado com práticas e exercícios.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
 
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
+            <img src="https://i.ibb.co/4PvNTf7/lab-quimica.jpg">
+            <h3>Estruturas, Átomos e Transformações</h3>
             <p>Material completo para estudo avançado com práticas e exercícios.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
 
+        <!-- SEGUNDA FILEIRA NOVA -->
+        <div class="card">
+            <img src="https://i.ibb.co/1d0Whtv/microscopio.jpg">
+            <h3>Bioquímica Celular</h3>
+            <p>Compreenda reações essenciais dentro da célula.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ibb.co/JrXYZ1t/atomos.jpg">
+            <h3>Estrutura Atômica Avançada</h3>
+            <p>Estudo detalhado da construção da matéria.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ibb.co/LJ1xRD7/professor-quimica.jpg">
+            <h3>Hidrocarbonetos: Estruturas e Reações</h3>
+            <p>Curso leve e rápido para começar do zero.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ibb.co/x6gQp4j/laboratorio.jpg">
+            <h3>Química Experimental</h3>
+            <p>Aulas práticas com experimentos e segurança.</p>
+            <a href="#" class="btn">Saiba mais</a>
+        </div>
 
     </section>
-
 
     <div class="footer">
         <div class="col">
@@ -205,8 +235,7 @@
             <p>0800 003 0200</p>
             <p>SUPORTE@AQX.COM</p>
         </div>
-    </footer>
+    </div>
 
 </body>
-
 </html>
