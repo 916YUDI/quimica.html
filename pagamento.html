@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento QR Code</title>
+
+    <style>
+        :root {
+            --purple: #1f083d;
+            --teal: #008080;
+            --teal-bright: #00ffc7;
+            --gray-bg: #e6e6e6;
+            --gray-nav: #e0e0e0;
+            --text: #333;
+            --qr-border: #0099ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--gray-bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background: linear-gradient(90deg, var(--gray-nav) 70%, var(--teal), var(--teal-bright));
+            border-bottom: 1px solid #ccc;
+        }
+
+        .top-nav nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .top-nav nav a {
+            text-decoration: none;
+            color: var(--text);
+            margin: 0 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            margin-right: 20px;
+            color: var(--purple);
+        }
+
+        .profile-icon {
+            font-size: 22px;
+            border: 1px solid var(--text);
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        /* MAIN */
+        .payment-page {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-message {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 30px;
+        }
+
+        .qr-code-placeholder {
+            width: 250px;
+            height: 250px;
+            background: white;
+            border: 5px solid var(--qr-border);
+            margin: 0 auto 40px auto;
+            box-shadow: 0 0 0 10px white, 0 0 0 15px var(--qr-border);
+            position: relative;
+        }
+
+        .qr-code-placeholder::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(0deg, black, black 5px, white 5px, white 10px),
+                repeating-linear-gradient(90deg, black, black 5px, white 5px, white 10px);
+            background-size: 25px 25px;
+            opacity: .1;
+        }
+
+        .info-message {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(90deg, var(--purple), var(--teal));
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .footer-grid {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section h3 {
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: white;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .main-message {
+                font-size: 24px;
+            }
+
+            .qr-code-placeholder {
+                width: 200px;
+                height: 200px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-nav">
+        <div class="logo-container">
+            <span class="logo">⚛️</span>
+            <nav>
+                <ul>
+                    <li><a href="#">O QUE SOMOS</a></li>
+                    <li><a href="#">CURSOS</a></li>
+                    <li><a href="#">BIBLIOTECA</a></li>
+                    <li><a href="#">LOJA</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="profile-icon">👤</div>
+    </header>
+
+    <main class="payment-page">
+        <div>
+            <h1 class="main-message">LEIA O QR CODE PARA PAGAR</h1>
+            <div class="qr-code-placeholder"></div>
+            <p class="info-message">
+                SERÁ ENVIADO PARA O SEU<br>EMAIL AS DEMAIS INFORMAÇÕES
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+
+            <div class="section">
+                <h3>REDES SOCIAIS</h3>
+                <p><span class="icon"></span>TIK TOK</p>
+                <p><span class="icon"></span>INSTAGRAM</p>
+            </div>
+
+            <div class="section">
+                <h3>COMERCIAL</h3>
+                <p>(41) 9785-8907</p>
+            </div>
+
+            <div class="section">
+                <h3>SUPORTE</h3>
+                <p>0800 003 0200</p>
+                <p><strong>SUPORTE@AQX.COM</strong></p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
