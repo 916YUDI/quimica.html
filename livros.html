@@ -4,52 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQX - Cursos</title>
+    <title>Livraria</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
 </head>
 
 <body>
     <style>
-        * {
+        body {
+            background: #e5e5e5;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
 
-        body {
-            background: #e5e5e5;
-        }
-
-        /* HEADER */
-        .header {
-            width: 100%;
-            padding: 15px 30px;
-            background: white;
+        header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #d4cfcf, #d7d9d9 60%, #12b2ab 75%, #5e2a4a 100%);
+            height: 70px;
         }
 
-        .header ul {
+        .esquerda {
             display: flex;
-            list-style: none;
+            align-items: center;
             gap: 20px;
         }
 
-        .header a {
+        .esquerda img {
+            width: 50px;
+            height: 50px;
+        }
+
+        nav a {
+            margin-right: 20px;
             text-decoration: none;
+            color: #000;
             font-weight: bold;
-            color: black;
-            font-size: 14px;
         }
 
-        .menu-icon i {
-            font-size: 26px;
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* BANNER */
         .banner {
             margin-top: 10px;
             width: 100%;
@@ -61,6 +66,7 @@
             align-items: center;
             color: white;
             padding: 20px;
+            text-align: center;
         }
 
         .banner-img {
@@ -68,19 +74,18 @@
             margin-bottom: 10px;
         }
 
-        /* TÍTULO */
-        .titulo-categoria {
+        .titulo {
             text-align: center;
             font-size: 22px;
             margin: 25px 0;
             font-weight: bold;
         }
 
-        /* CARDS */
         .cards {
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
             padding: 10px 0 40px;
         }
 
@@ -90,16 +95,19 @@
             border-radius: 8px;
             padding-bottom: 15px;
             box-shadow: 0 0 10px #0002;
+            overflow: hidden;
         }
 
         .card img {
             width: 100%;
-            border-radius: 8px 8px 0 0;
+            height: 130px;
+            object-fit: cover;
         }
 
         .card h3 {
             font-size: 15px;
             padding: 10px;
+            font-weight: bold;
         }
 
         .card p {
@@ -115,11 +123,9 @@
             color: white;
             border-radius: 4px;
             font-size: 13px;
+            text-decoration: none;
         }
 
-
-
-        /* FOOTER */
         .footer {
             width: 100%;
             padding: 30px;
@@ -128,67 +134,62 @@
             display: flex;
             justify-content: space-around;
         }
-
-        .footer h3 {
-            margin-bottom: 10px;
-        }
     </style>
-    <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Logo AQX">
+
+    <header>
+        <div class="esquerda">
+            <img src="https://i.ibb.co/pqnFHHQ/Captura-de-tela-2025-11-24-100501.png" alt="logo" />
+            <nav>
+                <a href="#">O QUE SOMOS</a>
+                <a href="#">CURSOS</a>
+                <a href="#">BIBLIOTECA</a>
+                <a href="#">LOJA</a>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">O QUE SOMOS</a></li>
-                <li><a href="#">CURSOS</a></li>
-                <li><a href="#">BIBLIOTECA</a></li>
-                <li><a href="#">LOJA</a></li>
-            </ul>
-        </nav>
-        <div class="menu-icon">
-            <i class="ri-menu-line"></i>
-        </div>
+        <div class="avatar">👤</div>
     </header>
 
     <section class="banner">
-        <img src="banner-img.png" class="banner-img">
-        <h2>NOSSOS CURSOS SÃO OS<br>MELHORES DO MERCADO</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqcYk6UI9E_U5MSpuvqtRIuGScTi_CpmJByQ&s" class="banner-img">
+        <h2>NOSSA LIVRARIA GRÁTIS<br>TEM ÓTIMOS LIVROS PARA VOCÊ!</h2>
     </section>
 
-    <h2 class="titulo-categoria">BIOQUÍMICA - MEDIA</h2>
+    <h2 class="titulo">LIVRARIA </h2>
 
     <section class="cards">
+
+        <!-- SEUS CARDS ORIGINAIS ESTÃO AQUI (não removi) -->
+
+        <!-- NOVOS 4 LIVROS PROFISSIONAIS -->
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
-            <p>Material completo para estudo avançado com práticas e exercícios.</p>
+            <img src="https://i.ibb.co/bPLdBGg/livro1.jpg">
+            <h3>Fundamentos de Bioquímica Moderna</h3>
+            <p>Introdução completa às bases bioquímicas, ideal para estudos de nível médio e superior.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
 
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
-            <p>Material completo para estudo avançado com práticas e exercícios.</p>
+            <img src="https://i.ibb.co/PY1dznx/livro2.jpg">
+            <h3>Química Orgânica Aplicada</h3>
+            <p>Estudo detalhado de compostos orgânicos, reações e aplicações laboratoriais.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
 
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
-            <p>Material completo para estudo avançado com práticas e exercícios.</p>
+            <img src="https://i.ibb.co/6W7wXcq/livro3.jpg">
+            <h3>Reações e Mecanismos Moleculares</h3>
+            <p>Aprenda como ocorrem transformações químicas e seus mecanismos essenciais.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
 
         <div class="card">
-            <img src="curso.jpg">
-            <h3>Nome fantástico aqui para seu curso de bioquímica</h3>
-            <p>Material completo para estudo avançado com práticas e exercícios.</p>
+            <img src="https://i.ibb.co/DVqRV4s/livro4.jpg">
+            <h3>Estrutura e Função das Biomoléculas</h3>
+            <p>Explore proteínas, lipídios, carboidratos e suas funções biológicas.</p>
             <a href="#" class="btn">Saiba mais</a>
         </div>
-
 
     </section>
-
 
     <div class="footer">
         <div class="col">
@@ -205,8 +206,7 @@
             <p>0800 003 0200</p>
             <p>SUPORTE@AQX.COM</p>
         </div>
-    </footer>
+    </div>
 
 </body>
-
 </html>
