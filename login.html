@@ -5,87 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro e Login</title>
+
     <style>
         :root {
-            --roxo: #1f083d;
-            --teal: #008080;
-            --teal-claro: #00ffc7;
-            --cinza-bg: #e6e6e6;
-            --cinza-input: #f0f0f0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --teal: #12b2ab;
+            --roxo: #5e2a4a;
+            --cinza-claro: #f5f5f5;
+            --cinza-input: #e9e9e9;
+            --preto-suave: #333;
         }
 
         body {
             font-family: Arial, sans-serif;
-            background: var(--cinza-bg);
+            background: white;
+            margin: 0;
+            padding: 0;
         }
 
-        /* HEADER */
-        .top-nav {
+        header {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            padding: 10px 40px;
-            background: linear-gradient(90deg, #b0b0b0 60%, var(--teal), var(--teal-claro));
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #d4cfcf 0%, #d7d9d9 60%, #12b2ab 75%, #5e2a4a 100%);
+            height: 70px;
         }
 
-        .logo {
-            font-size: 24px;
-            color: var(--roxo);
-            margin-right: 10px;
-        }
-
-        .top-nav nav ul {
+        .left {
             display: flex;
-            list-style: none;
+            align-items: center;
+            gap: 20px;
         }
 
-        .top-nav nav ul li {
-            margin: 0 15px;
+        .left img {
+            width: 50px;
+            height: 50px;
         }
 
-        .top-nav nav a {
+        nav a {
+            margin-right: 20px;
             text-decoration: none;
-            color: #333;
+            color: #000;
             font-weight: bold;
         }
 
-        .profile-icon {
-            font-size: 22px;
-            border: 1px solid #333;
-            padding: 5px 8px;
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* FORM */
-        .login-page {
+      
+        .login {
             display: flex;
             justify-content: center;
             padding-top: 40px;
         }
 
-        .form-container {
+        .forma {
             background: white;
             padding: 30px;
-            border-radius: 5px;
+            border-radius: 6px;
             width: 90%;
             max-width: 400px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
         }
 
-        .form-title {
+        .forma-titulo {
             text-align: center;
             font-size: 22px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid var(--preto-suave);
             margin-bottom: 25px;
+            font-weight: bold;
         }
 
-        .form-group {
+        .info {
             margin-bottom: 20px;
         }
 
@@ -93,85 +92,98 @@
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
+            color: var(--preto-suave);
         }
 
         input {
             width: 100%;
-            background: var(--cinza-input);
-            border: none;
-            padding: 8px;
-            border-radius: 3px;
+            border: 2px solid var(--cinza-input);
+            padding: 10px;
+            border-radius: 4px;
+            background: #fff;
+            transition: 0.2s;
         }
 
-        .submit-button {
+        input:focus {
+            border-color: var(--teal);
+            outline: none;
+            background: #f0fffd;
+        }
+
+        .botao {
             width: 100%;
             background: var(--teal);
             color: white;
             border: none;
-            padding: 12px;
-            border-radius: 3px;
+            padding: 14px;
+            border-radius: 4px;
             font-weight: bold;
             cursor: pointer;
+            margin-top: 10px;
+            transition: 0.2s;
         }
 
-        .bottom-bar {
+        .botao:hover {
+            background: #0e918d;
+        }
+
+        .botao-bar {
             background: #222;
             height: 30px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
     </style>
 </head>
 
 <body>
 
-    <header class="top-nav">
-        <div class="logo-container">
-            <span class="logo">⚛️</span>
-            <strong>O QUE SOMOS</strong>
+    <header>
+        <div class="left">
+            <img src="https://i.ibb.co/pqnFHHQ/Captura-de-tela-2025-11-24-100501.png" alt="logo" />
+
+            <nav>
+                <a href="#">O QUE SOMOS</a>
+                <a href="#">CURSOS</a>
+                <a href="#">BIBLIOTECA</a>
+                <a href="#">LOJA</a>
+            </nav>
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">CURSOS</a></li>
-                <li><a href="#">BIBLIOTECA</a></li>
-                <li><a href="#">LOJA</a></li>
-            </ul>
-        </nav>
-
-        <div class="profile-icon">👤</div>
+        <div class="avatar">👤</div>
     </header>
 
-    <main class="login-page">
-        <div class="form-container">
-            <h1 class="form-title">REGISTRO E LOGIN</h1>
+    <main class="login">
+        <div class="forma">
+
+            <h1 class="forma-titulo">REGISTRO E LOGIN</h1>
 
             <form>
-                <div class="form-group">
+                <div class="info">
                     <label>NOME</label>
-                    <input type="text">
+                    <input type="text" placeholder="Digite seu nome">
                 </div>
 
-                <div class="form-group">
+                <div class="info">
                     <label>EMAIL</label>
-                    <input type="email">
+                    <input type="email" placeholder="email@exemplo.com">
                 </div>
 
-                <div class="form-group">
+                <div class="info">
                     <label>SENHA</label>
-                    <input type="password">
+                    <input type="password" placeholder="Digite sua senha">
                 </div>
 
-                <div class="form-group">
+                <div class="info">
                     <label>CPF</label>
-                    <input type="text">
+                    <input type="text" placeholder="000.000.000-00">
                 </div>
 
-                <button class="submit-button">ENTRAR / REGISTRAR</button>
+                <button class="botao">ENTRAR / REGISTRAR</button>
             </form>
         </div>
     </main>
 
-    <div class="bottom-bar"></div>
+    <div class="botao-bar"></div>
 
 </body>
 
