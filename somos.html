@@ -21,34 +21,35 @@
             color: #333;
         }
 
-        /* HEADER */
-        .top-nav {
+             header {
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(90deg, #d6d6d6 0%, #cfcfcf 40%, #0ba9a0 70%, #5b1e4a 100%);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 40px;
-            background: linear-gradient(90deg, #1f083d, #008080, #00ffc7);
-            color: #fff;
+            padding: 0 30px;
+            border-bottom: 2px solid #00000020;
         }
 
-        .top-nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        .top-nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .profile-icon {
-            border: 1px solid #fff;
-            padding: 5px;
+        .logo img {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
+            object-fit: cover;
         }
 
+        nav a {
+            color: #000;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #222;
+        }
         /* TÍTULO */
         .page-title {
             text-align: center;
