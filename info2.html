@@ -4,68 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bioquímica - Médio</title>
+    <title>info2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <style>
-        :root {
-            --purple-dark: #1f083d;
-            --teal: #00ffc7;
-            --white: #ffffff;
-            --dark: #111;
-            --gray-bg: #e5e5e5;
-        }
-
-
-
         body {
             font-family: Arial, sans-serif;
-            background: var(--gray-bg);
+            background: #e5e5e5;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         header {
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(90deg, #d6d6d6 0%, #cfcfcf 40%, #0ba9a0 70%, #5b1e4a 100%);
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 10px 20px;
-            background: linear-gradient(90deg, #d4cfcf 0%, #d7d9d9 60%, #12b2ab 75%, #5e2a4a 100%);
-            height: 70px;
-        }
-
-        .left {
-            display: flex;
             align-items: center;
-            gap: 20px;
+            padding: 0 30px;
+            border-bottom: 2px solid #00000020;
         }
 
-        .left img {
-            width: 50px;
-            height: 50px;
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         nav a {
-            margin-right: 20px;
-            text-decoration: none;
             color: #000;
+            text-decoration: none;
+            margin-left: 25px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        .avatar {
-            width: 40px;
-            height: 40px;
-            border: 2px solid #000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        nav a:hover {
+            color: #222;
         }
 
-        /* LAYOUT */
         .course-section {
             padding: 20px 40px;
         }
@@ -76,7 +58,6 @@
             gap: 20px;
         }
 
-        /* LEFT COLUMN */
         .image-placeholder {
             width: 100%;
             height: 150px;
@@ -85,7 +66,7 @@
         }
 
         .details-box {
-            background: var(--white);
+            background: #fff;
             padding: 20px;
             border-radius: 0 0 5px 5px;
             box-shadow: 0 2px 5px #0002;
@@ -102,24 +83,22 @@
             font-weight: bold;
         }
 
-        /* BUTTON */
         .watch-button {
             width: 100%;
             padding: 10px;
             margin-top: 20px;
-            background: var(--teal);
+            background: #00ffc7;
             border: none;
             cursor: pointer;
             font-weight: bold;
             text-transform: uppercase;
         }
 
-        /* RIGHT COLUMN */
         .course-info {
-            background: linear-gradient(90deg, var(--purple-dark), #2c0e5a);
+            background: linear-gradient(90deg, #1f083d, #2c0e5a);
             padding: 30px;
             border-radius: 5px;
-            color: var(--white);
+            color: #fff;
         }
 
         .course-title {
@@ -127,11 +106,10 @@
             margin-bottom: 20px;
         }
 
-        /* FOOTER */
         footer {
-            background: linear-gradient(90deg, var(--purple-dark), var(--teal));
+            background: linear-gradient(90deg, #1f083d, #00ffc7);
             padding: 20px 40px;
-            color: var(--white);
+            color: #fff;
             margin-top: 50px;
         }
 
@@ -143,33 +121,37 @@
         .icon-small {
             width: 18px;
             height: 18px;
-            background: var(--white);
+            background: #fff;
             border-radius: 50%;
             margin-right: 5px;
+            display: inline-block;
         }
 
-        .course-content-grid {
-            grid-template-columns: 1fr;
-        }
+       
+            .course-content-grid {
+                grid-template-columns: 1fr;
+            }
 
-        .social-commercial-support {
-            flex-direction: column;
-            gap: 20px;
-        }
+            .social-commercial-support {
+                flex-direction: column;
+                gap: 20px;
+            }
+        
     </style>
+
     <header>
-        <div class="left">
-            <img src="https://i.ibb.co/pqnFHHQ/Captura-de-tela-2025-11-24-100501.png" alt="logo" />
-            <nav>
-                <a href="#">O QUE SOMOS</a>
-                <a href="#">CURSOS</a>
-                <a href="#">BIBLIOTECA</a>
-                <a href="#">LOJA</a>
-            </nav>
+        <div class="logo">
+            <img src="https://i.ibb.co/pqnFHHQ/Captura-de-tela-2025-11-24-100501.png" alt="logo">
         </div>
 
-        <div class="avatar">👤</div>
+        <nav>
+            <a href="somos">O QUE SOMOS</a>
+            <a href="cursos">CURSOS</a>
+            <a href="biblioteca">BIBLIOTECA</a>
+            <a href="loja">LOJA</a>
+        </nav>
     </header>
+
     <main class="course-section">
         <div class="course-content-grid">
 
@@ -191,21 +173,20 @@
             </div>
 
             <div class="course-info">
-                <h1 class="course-title">LIVRO QUIMICA</h1>
+                <h1 class="course-title">LIVRO QUÍMICA</h1>
 
                 <div class="info-block">
                     <h2>OBJETIVO</h2>
                     <p>TRAZER MAIS CONHECIMENTO</p>
                     <p>APRENDER MAIS</p>
-                    <p>NÃO DEIXAR VOCE PARADO</p>
+                    <p>NÃO DEIXAR VOCÊ PARADO</p>
                 </div>
 
                 <div class="info-block">
                     <h2>SINOPSE</h2>
                     <p>O livro apresenta os conceitos básicos da química de forma clara e objetiva, explicando átomos,
                         ligações, propriedades da matéria e reações químicas. Traz exemplos reais, exercícios e
-                        ilustrações para facilitar o aprendizado, ajudando iniciantes a entender como a química está
-                        presente no cotidiano e nos fenômenos que acontecem ao nosso redor.</p>
+                        ilustrações que ajudam iniciantes a entender como a química está presente no cotidiano.</p>
                 </div>
             </div>
 
@@ -238,6 +219,4 @@
 </body>
 
 </html>
-
-
 
