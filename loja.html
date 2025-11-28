@@ -7,17 +7,6 @@
     <title>Loja - Ofertas</title>
 
     <style>
-        :root {
-            --purple: #1f083d;
-            --teal: #008080;
-            --teal-bright: #00ffc7;
-            --bg: #e6e6e6;
-            --text: #333;
-            --red: #ff0000;
-            --green: #008000;
-            --white: #fff;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -25,46 +14,49 @@
         }
 
         body {
+            background: #f5f5f5;
+            color: #222;
             font-family: Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
         }
 
-        /* HEADER */
-        .top-nav {
+
+        header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 10px 40px;
-            background: linear-gradient(90deg, #e0e0e0 70%, var(--teal), var(--teal-bright));
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #d4cfcf 0%, #d7d9d9 60%, #12b2ab 75%, #5e2a4a 100%);
+            height: 70px;
         }
 
-        .top-nav nav ul {
+        .left {
             display: flex;
-            list-style: none;
-            gap: 15px;
+            align-items: center;
+            gap: 20px;
         }
 
-        .top-nav nav a {
+        .left img {
+            width: 50px;
+            height: 50px;
+        }
+
+        nav a {
+            margin-right: 20px;
             text-decoration: none;
-            color: var(--text);
+            color: #000;
             font-weight: bold;
         }
 
-        .logo {
-            font-size: 24px;
-            color: var(--purple);
-            margin-right: 20px;
-        }
-
-        .profile-icon {
-            font-size: 22px;
-            padding: 5px;
-            border: 1px solid var(--text);
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* MAIN */
         .store-page {
             max-width: 1200px;
             margin: 0 auto;
@@ -103,65 +95,64 @@
             color: var(--red);
         }
 
-        /* PRODUCTS GRID */
-        .products-grid {
+        .produto-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
-        .product-card {
+        .produto-card {
             background: var(--white);
             border: 1px solid #ddd;
             padding-bottom: 10px;
             border-radius: 5px;
+            overflow: hidden;
         }
 
-        .product-image-container {
+        .produto-image-container {
             height: 180px;
-            background: url("placeholder-tenis.jpg") center/contain no-repeat var(--white);
-            position: relative;
+            background: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
-        .favorite-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            color: #999;
+        .produto-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
-        .product-info {
+        .produto-info {
             padding: 10px 15px;
         }
 
-        .product-name {
+        .produto-name {
             font-weight: bold;
         }
 
-        .product-category {
+        .produto-category {
             font-size: 12px;
             color: #666;
         }
 
-        .product-price-old {
+        .produto-price-old {
             font-size: 12px;
             text-decoration: line-through;
             color: #999;
         }
 
-        .product-price-new {
+        .produto-price-new {
             font-weight: bold;
         }
 
-        .discount {
-            color: var(--green);
+        .desconto {
+            color: green;
             font-size: 12px;
             margin-left: 5px;
         }
 
-        /* FOOTER */
         footer {
             background: linear-gradient(90deg, var(--purple), var(--teal));
             color: var(--white);
@@ -194,41 +185,38 @@
             margin-right: 5px;
         }
 
-   
-            .footer-sections {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-        
+        .footer-sections {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
     </style>
 </head>
 
 <body>
 
-    <header class="top-nav">
-        <div class="logo-container">
-            <span class="logo">⚛️</span>
+    <header>
+        <div class="left">
+            <img src="https://i.ibb.co/pqnFHHQ/Captura-de-tela-2025-11-24-100501.png" alt="logo" />
             <nav>
-                <ul>
-                    <li><a href="#">O QUE SOMOS</a></li>
-                    <li><a href="#">CURSOS</a></li>
-                    <li><a href="#">BIBLIOTECA</a></li>
-                    <li><a href="#">LOJA</a></li>
-                </ul>
+                <a href="#">O QUE SOMOS</a>
+                <a href="#">CURSOS</a>
+                <a href="#">BIBLIOTECA</a>
+                <a href="#">LOJA</a>
             </nav>
         </div>
-        <div class="profile-icon">👤</div>
+
+        <div class="avatar">👤</div>
     </header>
 
     <main class="store-page">
         <h1 class="page-title">LOJA</h1>
 
         <section class="options-bar">
-            <button class="option-button">OPÇÕES</button>
-            <button class="option-button">OPÇÕES</button>
-            <button class="option-button">OPÇÕES</button>
-            <button class="option-button">OPÇÕES</button>
+            <button class="option-button">KITS</button>
+            <button class="option-button">EQUIPAMENTOS</button>
+            <button class="option-button">MATERIAL DIDATICO</button>
+            <button class="option-button">EPIs e Segurança</button>
         </section>
 
         <section class="promo-section">
@@ -236,49 +224,59 @@
             <span class="right">50% DE DESCONTO COM CUPOM</span>
         </section>
 
-        <section class="products-grid">
+        <section class="produto-grid">
 
-            <!-- PRODUTO (REPETIR SE QUISER) -->
-            <div class="product-card">
-                <div class="product-image-container"></div>
-                <div class="product-info">
-                    <p class="product-name">Tênis Nike Air Max Alpha Trainer 5 Masculino</p>
-                    <p class="product-category">Treino & Academias</p>
-                    <p class="product-price-old">R$ 750,00</p>
-                    <p class="product-price-new">R$ 700,00 <span class="discount">5% off</span></p>
+
+            <div class="produto-card">
+                <div class="produto-image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq1xxIbZxZu8TllnUGi4z3ZOhKwcp2wG_xfA&s"
+                        class="produto-img">
+                </div>
+                <div class="produto-info">
+                    <p class="produto-name">KIT DE QUÍMICA INFANTIL</p>
+                    <p class="produto-category">INFANTIL</p>
+                    <p class="produto-price-old">R$ 750,00</p>
+                    <p class="produto-price-new">R$ 700,00 <span class="desconto">5% off</span></p>
                 </div>
             </div>
 
-            <!-- COPIA E COLA ESTES -->
-            <div class="product-card">
-                <div class="product-image-container"></div>
-                <div class="product-info">
-                    <p class="product-name">Tênis Nike Air Max Alpha Trainer 5 Masculino</p>
-                    <p class="product-category">Treino & Academias</p>
-                    <p class="product-price-old">R$ 750,00</p>
-                    <p class="product-price-new">R$ 700,00 <span class="discount">5% off</span></p>
+            <div class="produto-card">
+                <div class="produto-image-container">
+                    <img src="https://www.seniorway.com.br/img/products/mascara-descartavel-tripla-medix-caixa-com-50-unidades_1_1200.jpg"
+                        class="produto-img">
+                </div>
+                <div class="produto-info">
+                    <p class="produto-name">CAIXA DE MÁSCARA 30 UNIDADES</p>
+                    <p class="produto-category">SEGURANÇA</p>
+                    <p class="produto-price-old">R$ 750,00</p>
+                    <p class="produto-price-new">R$ 700,00 <span class="desconto">5% off</span></p>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-image-container"></div>
-                <div class="product-info">
-                    <p class="product-name">Tênis Nike Air Max Alpha Trainer 5 Masculino</p>
-                    <p class="product-category">Treino & Academias</p>
-                    <p class="product-price-old">R$ 750,00</p>
-                    <p class="product-price-new">R$ 700,00 <span class="discount">5% off</span></p>
+
+            <div class="produto-card">
+                <div class="produto-image-container">
+                    <img src="https://m.media-amazon.com/images/I/61SFFlrCKDL._AC_UF1000,1000_QL80_.jpg"
+                        class="produto-img">
+                </div>
+                <div class="produto-info">
+                    <p class="produto-name">LIVRO - QUÍMICA</p>
+                    <p class="produto-category">LIVROS</p>
+                    <p class="produto-price-old">R$ 750,00</p>
+                    <p class="produto-price-new">R$ 700,00 <span class="desconto">5% off</span></p>
                 </div>
             </div>
 
-            
-
-            <div class="product-card">
-                <div class="product-image-container"></div>
-                <div class="product-info">
-                    <p class="product-name">Tênis Nike Air Max Alpha Trainer 5 Masculino</p>
-                    <p class="product-category">Treino & Academias</p>
-                    <p class="product-price-old">R$ 750,00</p>
-                    <p class="product-price-new">R$ 700,00 <span class="discount">5% off</span></p>
+            <div class="produto-card">
+                <div class="produto-image-container">
+                    <img src="https://epi.ao/wp-content/uploads/2023/06/kit-de-protecao-quimica-1.png"
+                        class="produto-img">
+                </div>
+                <div class="produto-info">
+                    <p class="produto-name">ROUPA EPI DE SEGURANÇA</p>
+                    <p class="produto-category">SEGURANÇA</p>
+                    <p class="produto-price-old">R$ 750,00</p>
+                    <p class="produto-price-new">R$ 700,00 <span class="desconto">5% off</span></p>
                 </div>
             </div>
 
