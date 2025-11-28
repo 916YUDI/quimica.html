@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Ofertas</title>
+
+    <style>
+        :root {
+            --purple: #1f083d;
+            --teal: #008080;
+            --teal-bright: #00ffc7;
+            --bg: #e6e6e6;
+            --text: #333;
+            --red: #ff0000;
+            --green: #008000;
+            --white: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        /* HEADER */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background: linear-gradient(90deg, #e0e0e0 70%, var(--teal), var(--teal-bright));
+        }
+
+        .top-nav nav ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .top-nav nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: bold;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: var(--purple);
+            margin-right: 20px;
+        }
+
+        .profile-icon {
+            font-size: 22px;
+            padding: 5px;
+            border: 1px solid var(--text);
+            border-radius: 50%;
+        }
+
+        /* MAIN */
+        .store-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 900;
+            margin: 30px 0;
+        }
+
+        .options-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .option-button {
+            padding: 10px 30px;
+            background: var(--bg);
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .promo-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
+        .promo-section .right {
+            color: var(--red);
+        }
+
+        /* PRODUCTS GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid #ddd;
+            padding-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .product-image-container {
+            height: 180px;
+            background: url("placeholder-tenis.jpg") center/contain no-repeat var(--white);
+            position: relative;
+        }
+
+        .favorite-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #999;
+        }
+
+        .product-info {
+            padding: 10px 15px;
+        }
+
+        .product-name {
+            font-weight: bold;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .product-price-old {
+            font-size: 12px;
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .product-price-new {
+            font-weight: bold;
+        }
+
+        .discount {
+            color: var(--green);
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(90deg, var(--purple), var(--teal));
+            color: var(--white);
+            padding: 20px 40px;
+            margin-top: 40px;
+        }
+
+        .footer-sections {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        footer .section h3 {
+            margin-bottom: 10px;
+        }
+
+        footer .section p {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-placeholder {
+            width: 18px;
+            height: 18px;
+            background: var(--white);
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 700px) {
+            .footer-sections {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-nav">
+        <div class="logo-container">
+            <span class="logo">⚛️</span>
+            <nav>
+                <ul>
+                    <li><a href="#">O QUE SOMOS</a></li>
+                    <li><a href="#">CURSOS</a></li>
+                    <li><a href="#">BIBLIOTECA</a></li>
+                    <li><a href="#">LOJA</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="profile-icon">👤</div>
+    </header>
+
+    <main class="store-page">
+        <h1 class="page-title">LOJA</h1>
+
+        <section class="options-bar">
+            <button class="option-button">OPÇÕES</button>
+            <button class="option-button">OPÇÕES</button>
+            <button class="option-button">OPÇÕES</button>
+            <button class="option-button">OPÇÕES</button>
+        </section>
+
+        <section class="promo-section">
+            <span>PRINCIPAIS OFERTAS</span>
+            <span class="right">50% DE DESCONTO COM CUPOM</span>
+        </section>
+
+        <section class="products-grid">
+
+            <!-- PRODUTO (REPETIR SE QUISER) -->
+            <div class="product-card">
+                <div class="product-image-container"><span class="favorite-icon">♡</span></div>
+                <div class="product-info">
+                    <p class="product-name">Tênis Nike Air Max Alpha Trainer 5 Masculino</p>
+                    <p class="product-category">Treino & Academias</p>
+                    <p class="product-price-old">R$ 750,00</p>
+                    <p class="product-price-new">R$ 700,00 <span class="discount">5% off</span></p>
+                </div>
+            </div>
+
+            <!-- COPIA E COLA ESTES -->
+            <div class="product-card">
+                <div class="product-image-container"><span class="favorite-icon">♡</span></div>
+                <div class="product-info">
+                    <p class="product-name">Tênis Nike Air Max Alpha Trainer 5 Masculino</p>
+                    <p class="product-category">Treino & Academias</p>
+                    <p class="product-price-old">R$ 750,00</p>
+                    <p class="product-price-new">R$ 700,00 <span class="discount">5% off</span></p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container"><span class="favorite-icon">♡</span></div>
+                <div class="product-info">
+                    <p class="product-name">Tênis Nike Air Max Alpha Trainer 5 Masculino</p>
+                    <p class="product-category">Treino & Academias</p>
+                    <p class="product-price-old">R$ 750,00</p>
+                    <p class="product-price-new">R$ 700,00 <span class="discount">5% off</span></p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-sections">
+            <div class="section">
+                <h3>REDES SOCIAIS</h3>
+                <p><span class="icon-placeholder"></span> TIK TOK</p>
+                <p><span class="icon-placeholder"></span> INSTAGRAM</p>
+            </div>
+
+            <div class="section">
+                <h3>COMERCIAL</h3>
+                <p>(41) 9785-8907</p>
+            </div>
+
+            <div class="section">
+                <h3>SUPORTE</h3>
+                <p>0800 003 0200</p>
+                <p>SUPORTE@AQX.COM</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
