@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Login</title>
+    <style>
+        :root {
+            --roxo: #1f083d;
+            --teal: #008080;
+            --teal-claro: #00ffc7;
+            --cinza-bg: #e6e6e6;
+            --cinza-input: #f0f0f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--cinza-bg);
+        }
+
+        /* HEADER */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background: linear-gradient(90deg, #b0b0b0 60%, var(--teal), var(--teal-claro));
+        }
+
+        .logo {
+            font-size: 24px;
+            color: var(--roxo);
+            margin-right: 10px;
+        }
+
+        .top-nav nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .top-nav nav ul li {
+            margin: 0 15px;
+        }
+
+        .top-nav nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .profile-icon {
+            font-size: 22px;
+            border: 1px solid #333;
+            padding: 5px 8px;
+            border-radius: 50%;
+        }
+
+        /* FORM */
+        .login-page {
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 22px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            background: var(--cinza-input);
+            border: none;
+            padding: 8px;
+            border-radius: 3px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: var(--teal);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 3px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .bottom-bar {
+            background: #222;
+            height: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-nav">
+        <div class="logo-container">
+            <span class="logo">⚛️</span>
+            <strong>O QUE SOMOS</strong>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">CURSOS</a></li>
+                <li><a href="#">BIBLIOTECA</a></li>
+                <li><a href="#">LOJA</a></li>
+            </ul>
+        </nav>
+
+        <div class="profile-icon">👤</div>
+    </header>
+
+    <main class="login-page">
+        <div class="form-container">
+            <h1 class="form-title">REGISTRO E LOGIN</h1>
+
+            <form>
+                <div class="form-group">
+                    <label>NOME</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>EMAIL</label>
+                    <input type="email">
+                </div>
+
+                <div class="form-group">
+                    <label>SENHA</label>
+                    <input type="password">
+                </div>
+
+                <div class="form-group">
+                    <label>CPF</label>
+                    <input type="text">
+                </div>
+
+                <button class="submit-button">ENTRAR / REGISTRAR</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="bottom-bar"></div>
+
+</body>
+
+</html>
