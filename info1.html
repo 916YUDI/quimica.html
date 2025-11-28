@@ -1,236 +1,235 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bioquímica - Médio</title>
+    <title>info1</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<style>
-    :root {
-    --purple-dark: #1f083d;
-    --teal: #00ffc7;
-    --white: #ffffff;
-    --dark: #111;
-    --gray-bg: #e5e5e5;
-}
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #e5e5e5;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background: var(--gray-bg);
-}
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #d4cfcf 0%, #d7d9d9 60%, #12b2ab 75%, #5e2a4a 100%);
+            height: 70px;
+        }
 
-/* HEADER */
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background: linear-gradient(90deg, #1f083d, var(--teal));
-    color: var(--white);
-}
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-.top-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+        .left img {
+            width: 50px;
+            height: 50px;
+        }
 
-.top-nav a {
-    color: var(--white);
-    font-weight: bold;
-    text-decoration: none;
-}
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
 
-.profile-icon {
-    border: 1px solid var(--white);
-    padding: 5px;
-    border-radius: 50%;
-}
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* LAYOUT */
-.course-section {
-    padding: 20px 40px;
-}
 
-.course-content-grid {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
-}
+        .course-section {
+            padding: 20px 40px;
+        }
 
-/* LEFT COLUMN */
-.image-placeholder {
-    width: 100%;
-    height: 150px;
-    background: #555;
-    border-radius: 5px 5px 0 0;
-}
+        .course-content-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
 
-.details-box {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 2px 5px #0002;
-}
+        .image-placeholder {
+            width: 100%;
+            height: 150px;
+            background: #555;
+            border-radius: 5px 5px 0 0;
+        }
 
-.detail-label {
-    font-size: 14px;
-    color: #666;
-    margin-top: 15px;
-}
+        .details-box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 5px #0002;
+        }
 
-.detail-value {
-    font-size: 18px;
-    font-weight: bold;
-}
+        .detail-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
 
-/* BUTTON */
-.watch-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background: var(--teal);
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+        .detail-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-/* RIGHT COLUMN */
-.course-info {
-    background: linear-gradient(90deg, var(--purple-dark), #2c0e5a);
-    padding: 30px;
-    border-radius: 5px;
-    color: var(--white);
-}
+        .watch-button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background: #00ffc7;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
-.course-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
+        .course-info {
+            background: linear-gradient(90deg, #1f083d, #2c0e5a);
+            padding: 30px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
 
-/* FOOTER */
-footer {
-    background: linear-gradient(90deg, var(--purple-dark), var(--teal));
-    padding: 20px 40px;
-    color: var(--white);
-    margin-top: 50px;
-}
+        .course-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
 
-.social-commercial-support {
-    display: flex;
-    justify-content: space-between;
-}
+        footer {
+            background: linear-gradient(90deg, #1f083d, #00ffc7);
+            padding: 20px 40px;
+            color: #ffffff;
+            margin-top: 50px;
+        }
 
-.icon-small {
-    width: 18px;
-    height: 18px;
-    background: var(--white);
-    border-radius: 50%;
-    margin-right: 5px;
-}
+        .social-commercial-support {
+            display: flex;
+            justify-content: space-between;
+        }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .course-content-grid {
-        grid-template-columns: 1fr;
-    }
+        .icon-small {
+            width: 18px;
+            height: 18px;
+            background: #ffffff;
+            border-radius: 50%;
+            margin-right: 5px;
+            display: inline-block;
+        }
 
-    .social-commercial-support {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
+       
+            .course-content-grid {
+                grid-template-columns: 1fr;
+            }
 
-</style>
-<header class="top-nav">
-    <div class="logo-container">
-        <span class="logo">⚛️</span>
-        <span class="logo-text">O QUE SOMOS</span>
-    </div>
+            .social-commercial-support {
+                flex-direction: column;
+                gap: 20px;
+            }
+        
+    </style>
 
-    <nav>
-        <ul>
-            <li><a href="#">CURSOS</a></li>
-            <li><a href="#">BIBLIOTECA</a></li>
-            <li><a href="#">LOJA</a></li>
-        </ul>
-    </nav>
-
-    <div class="profile-icon">👤</div>
-</header>
-
-<main class="course-section">
-    <div class="course-content-grid">
-
-        <div class="course-details">
-            <div class="image-placeholder"></div>
-
-            <div class="details-box">
-                <p class="detail-label">CARGA HORÁRIA</p>
-                <p class="detail-value">400 HORAS</p>
-
-                <p class="detail-label">TEMPO DE FINALIZAÇÃO</p>
-                <p class="detail-value">1 MÊS</p>
-
-                <p class="detail-label">A QUEM SE DESTINA?</p>
-                <p class="detail-value">EU</p>
-
-                <button class="watch-button">ASSISTIR</button>
-            </div>
+    <header>
+        <div class="left">
+            <img src="https://i.ibb.co/pqnFHHQ/Captura-de-tela-2025-11-24-100501.png" alt="logo" />
+            <nav>
+                <a href="#">O QUE SOMOS</a>
+                <a href="#">CURSOS</a>
+                <a href="#">BIBLIOTECA</a>
+                <a href="#">LOJA</a>
+            </nav>
         </div>
 
-        <div class="course-info">
-            <h1 class="course-title">BIOQUÍMICA - MÉDIO</h1>
+        <div class="avatar">👤</div>
+    </header>
 
-            <div class="info-block">
-                <h2>OBJETIVO</h2>
-                <p>COLOCAR TEXTO</p>
-                <p>COLOCAR TEXTO</p>
-                <p>COLOCAR TEXTO</p>
-                <p>COLOCAR TEXTO</p>
+    <main class="course-section">
+        <div class="course-content-grid">
+
+            <div class="course-details">
+                <div class="image-placeholder"></div>
+
+                <div class="details-box">
+                    <p class="detail-label">CARGA HORÁRIA</p>
+                    <p class="detail-value">400 HORAS</p>
+
+                    <p class="detail-label">TEMPO DE FINALIZAÇÃO</p>
+                    <p class="detail-value">1 MÊS</p>
+
+                    <p class="detail-label">A QUEM SE DESTINA?</p>
+                    <p class="detail-value">EU</p>
+
+                    <button class="watch-button">ASSISTIR</button>
+                </div>
             </div>
 
-            <div class="info-block">
-                <h2>SINOPSE</h2>
-                <p>COLOCAR TEXTO</p>
+            <div class="course-info">
+                <h1 class="course-title">CURSO</h1>
+
+                <div class="info-block">
+                    <h2>OBJETIVO</h2>
+                    <p>APRENDIZADO</p>
+                    <p>MAIS CONHECIMENTO</p>
+                    <p>INFORMAÇÃO</p>
+                </div>
+
+                <div class="info-block">
+                    <h2>SINOPSE</h2>
+                    <p>O livro apresenta os conceitos básicos da química de forma simples e objetiva, explicando átomos,
+                        ligações, propriedades da matéria e reações químicas. Traz exemplos do dia a dia e exercícios
+                        que facilitam o entendimento, ajudando iniciantes a compreender como a química funciona nos
+                        fenômenos do cotidiano.</p>
+                </div>
             </div>
+
         </div>
+    </main>
 
-    </div>
-</main>
+    <footer>
+        <div class="social-commercial-support">
 
-<footer>
-    <div class="social-commercial-support">
+            <div class="section">
+                <h3>REDES SOCIAIS</h3>
+                <p><span class="icon-small"></span> TIK TOK</p>
+                <p><span class="icon-small"></span> INSTAGRAM</p>
+            </div>
 
-        <div class="section">
-            <h3>REDES SOCIAIS</h3>
-            <p><span class="icon-small"></span> TIK TOK</p>
-            <p><span class="icon-small"></span> INSTAGRAM</p>
+            <div class="section">
+                <h3>COMERCIAL</h3>
+                <p>(41) 9785-8907</p>
+            </div>
+
+            <div class="section support">
+                <h3>SUPORTE</h3>
+                <p>0800 003 0200</p>
+                <p class="email">SUPORTE@AQX.COM</p>
+            </div>
+
         </div>
-
-        <div class="section">
-            <h3>COMERCIAL</h3>
-            <p>(41) 9785-8907</p>
-        </div>
-
-        <div class="section support">
-            <h3>SUPORTE</h3>
-            <p>0800 003 0200</p>
-            <p class="email">SUPORTE@AQX.COM</p>
-        </div>
-
-    </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>
